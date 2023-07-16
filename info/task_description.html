@@ -31,7 +31,7 @@
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
 <details>
-    <summary><i>Need a small hint? Press me</i></summary>
+    <summary><i>Need a small hint? Click on</i></summary>
     <p style="text-align: justify;"><i>
         The maximum number of pieces that can be captured in a single move is best computed with a method that locally loops through the four diagonal directions from the current position of the king. For each such direction that contains an opponent piece with a vacant space behind it, remove that opponent piece from the board, and recursively compute the number of pieces that can be captured from the vacant square that your king jumps into. Once that recursive call has returned, restore the captured piece on the board, and continue looping to the next diagonal direction. The number of captures of whichever direction gives the best result from that square is returned as the answer.
     </i></p>
