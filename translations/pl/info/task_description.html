@@ -1,0 +1,57 @@
+<!-- Describe task in general -->
+
+<p>
+    Proszę sobie wyobrazić szachownicę <b class="code">n</b>-by-<b class="code">n</b>, gdzie pojedynczy pionek znajduje się obecnie na pozycji <b class="code">position</b> (x, y), a lista zawierająca pozycje pionków przeciwnika to <b class="code">pieces</b>. 
+</p>
+<p style="text-align: justify;">
+    Pionek może zbić figurę tylko o jeden krok w czterech kierunkach po przekątnej, zakładając, że pole za figurą przeciwnika w tym kierunku po przekątnej jest wolne. Twój pion może następnie zbić tę figurę, przeskakując nad nią na wolne pole, natychmiast usuwając zbitą figurę z planszy. Łańcuch bierek jest kontynuowany od nowego pola, potencjalnie zdobywając wszystkie piony za jednym zamachem. 
+</p>
+<p>
+    Funkcja powinna zwracać maksymalną liczbę pionów, które pion może potencjalnie zbić w jednym ruchu.
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Dane wejściowe:</strong> Trzy argumenty: rozmiar <span>({% if is_js %}number{% else %}int{% endif %})</span>, współrzędne ({% if is_js %}tablica{% else %}krotka{% endif %} <span>({% if is_js %}array{% else %}tuple{% endif %})</span> dwóch liczb całkowitych <span>({% if is_js %}number{% else %}int{% endif %})</span>) i sekwencja pionów przeciwnika ({% if is_js %}tablica{% else %}lista{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> współrzędnych).
+</p>
+
+<p>
+   <strong>Wynik:</strong> Liczba całkowita <span>({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>Przykłady:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<details>
+    <summary><i>Potrzebują Państwo małej podpowiedzi? Proszę kliknąć na</i></summary>
+    <p style="text-align: justify;"><i>
+        Maksymalną liczbę pionów, które można zbić w jednym ruchu, najlepiej obliczyć za pomocą metody, która lokalnie zapętla cztery kierunki po przekątnej od bieżącej pozycji króla. Dla każdego takiego kierunku, który zawiera figurę przeciwnika z wolnym polem za nią, należy usunąć tę figurę przeciwnika z planszy i rekurencyjnie obliczyć liczbę pionów, które można zbić z wolnego pola, na które wskoczy król. Gdy to rekurencyjne wywołanie powróci, należy przywrócić zbitą figurę na planszę i kontynuować pętlę do następnego kierunku po przekątnej. Jako odpowiedź zwracana jest liczba bić w dowolnym kierunku, który daje najlepszy wynik z danego pola.
+    </i></p>
+</details>
+
+<p><i>Misja została zaczerpnięta z <span>Python CCPS 109</span>. Jest ona nauczana dla <span>Ryerson Chang School of Continuing Education</span> przez <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
