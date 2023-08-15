@@ -1,0 +1,57 @@
+<!-- Describe task in general -->
+
+<p>
+    Уявіть собі шахову дошку <b class="code">n</b>-by-<b class="code">n</b>, де ваша шашка в даний момент знаходиться на <b class="code">position</b> (x, y) і є <b class="code">pieces</b> - список, який містить позиції пішаків супротивника. 
+</p>
+<p style="text-align: justify;">
+    Ваша шашка може побити пішака лише на один крок у чотирьох діагональних напрямках за умови, що клітинка за пішаком суперника у цьому діагональному напрямку є вільною. Тоді ваша шашка може захопити цю фігуру, перестрибнувши через неї на вільну клітину, негайно прибираючи захоплену фігуру з дошки. Ланцюжок захоплень продовжується з нової клітини, потенційно захоплюючи всі фігури одним махом. 
+</p>
+<p>
+    Ваша функція повинна повертати максимальну кількість фігур, які шашка потенційно може захопити за один хід.
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Вхідні дані:</strong> Три аргументи: розмір <span>({% if is_js %}number{% else %}int{% endif %})</span>, координати ({% if is_js %}масив{% else %}кортеж{% endif %} <span>({% if is_js %}array{% else %}tuple{% endif %})</span> з двох цілих чисел <span>({% if is_js %}number{% else %}int{% endif %})</span>) та послідовність фігур суперника (масив{% if is_js %}{% else %} список{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> координат).
+</p>
+
+<p>
+   <strong>Виведіть єдине число:</strong> Ціле число <span>({% if is_js %}number{% else %}int{% endif %})</span>. 
+</p>
+
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<details>
+    <summary><i>Потрібна невелика підказка? Натисніть на</i></summary>
+    <p style="text-align: justify;"><i>
+        Максимальну кількість фігур, яку можна захопити за один хід, найкраще обчислювати за допомогою методу, який локально циклічно переглядає чотири діагональні напрямки від поточної позиції короля. Для кожного такого напрямку, який містить фігуру суперника з вільною клітиною за нею, видаліть цю фігуру з дошки і рекурсивно обчисліть кількість фігур, які можна захопити з вільної клітини, на яку стрибне ваш король. Як тільки рекурсивний виклик повернувся, поверніть захоплену фігуру на дошку і продовжуйте цикл у наступному діагональному напрямку. Кількість захоплень фігур з того напрямку, який дає найкращий результат, повертається як відповідь.
+    </i></p>
+</details>
+
+<p><i>Місія взята з сайту <span>Python CCPS 109</span>. Її викладають для <span>Ryerson Chang School of Continuing Education</span> <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
