@@ -32,12 +32,7 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<details>
-    <summary><i>Besoin d'un petit conseil? Cliquez sur</i></summary>
-    <p style="text-align: justify;"><i>
-        Le nombre maximum de pièces qui peuvent être capturées en un seul coup est mieux calculé avec une méthode qui boucle localement les quatre directions diagonales à partir de la position actuelle du roi. Pour chacune de ces directions qui contient une pièce adverse avec une case vide derrière elle, retirez cette pièce de l'échiquier et calculez de manière récursive le nombre de pièces qui peuvent être capturées à partir de la case vide sur laquelle votre roi saute. Une fois que l'appel récursif est revenu, remettez la pièce capturée sur l'échiquier et continuez la boucle jusqu'à la direction diagonale suivante. Le nombre de captures dans la direction qui donne le meilleur résultat à partir de cette case est renvoyé comme réponse.
-    </i></p>
-</details>
+
 
 <p><i>La mission a été tirée de <span>Python CCPS 109</span>. Elle est enseignée pour <span>Ryerson Chang School of Continuing Education</span> par <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
 

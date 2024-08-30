@@ -32,12 +32,7 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<details>
-    <summary><i>需要一点提示吗？点击</i></summary>
-    <p style="text-align: justify;"><i>
-        计算一步棋能吃掉的最大棋子数的最佳方法是从国王当前位置开始局部循环四个对角线方向。每一个对角线方向上都有一个对方棋子，其后面有一个空位，将该对方棋子从棋盘上删除，然后递归计算从国王跳入的空位上可以吃掉的棋子数。一旦递归调用返回，就将吃掉的棋子还原到棋盘上，并继续循环到下一个对角线方向。无论在哪个方向吃掉的棋子数最多，都会作为答案返回。
-    </i></p>
-</details>
+
 
 <p><i>该任务摘自<span>Python CCPS 109</span> 。它的教学网站是<span>Ryerson Chang School of Continuing Education</span> 。<a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
 
